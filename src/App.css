@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@1&display=swap');
+@import url('http://fonts.cdnfonts.com/css/facon');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Facon', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background__video {
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(calc((100% - 100vw) / 2));
+  filter: brightness(70%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  justify-content: space-around;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.links {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.mobile__links {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  margin: 2rem 0;
+}
+
+.search__exercises {
+  z-index: 10;
+}
+
+.searching__input {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.54);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
+  font-size: 16px;
+}
+
+.menu__icon {
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__icon:hover {
+  cursor: pointer;
+}
+
+.mobile__menu {
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+
+  width: 100vw;
+  height: 100vh;
+
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+
+  z-index: 20;
+}
+
+.close__icon {
+  position: absolute;
+  z-index: 50;
   color: white;
+  top: 5%;
+  left: 85%;
 }
 
-.App-link {
-  color: #61dafb;
+.exercises__wrapper {
+  display: flex;
+  flex-direction: column;
+  background: rgb(102, 102, 102);
+  align-items: center;
+  padding-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.exercises {
+  background: rgb(102, 102, 102);
+}
+
+.exercise__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
