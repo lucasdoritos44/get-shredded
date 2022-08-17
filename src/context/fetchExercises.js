@@ -4,6 +4,8 @@ import { exerciseOptions, fetchData } from '../utils/fetchData'
 export const FetchExercises = createContext()
 export const SearchedContext = createContext()
 export const SetSearchedContext = createContext()
+export const BodyDataContext = createContext()
+export const SetBodyDataContext = createContext()
 
 
 export const FetchExercisesData = () => {
@@ -15,11 +17,25 @@ export const SearchedContextData = () => {
 export const SetSearchedContextData = () => {
   return useContext(SetSearchedContext)
 }
-
+export const BodyDataData = () => {
+  return useContext(BodyDataContext)
+}
+export const SetBodyDataData = () => {
+  return useContext(SetBodyDataContext)
+}
 
 export const FetchExercisesProvider = ({ children }) => {
   const [exercises, setExercises] = useState([])
   const [searchedExercises, setSearchedExercises] = useState([])
+  const [bodyData, setBodyData] = useState({
+    age: Number,
+    gender: 'male',
+    weight: Number,
+    height: Number,
+    neck: Number,
+    waist: Number,
+    hip: Number
+  })
 
   useEffect(() => {
     const fetchExercises = async () => {
@@ -38,7 +54,11 @@ export const FetchExercisesProvider = ({ children }) => {
     <FetchExercises.Provider value={exercises}>
       <SearchedContext.Provider value={searchedExercises}>
         <SetSearchedContext.Provider value={setSearchedExercises}>
-          {children}
+          <BodyDataContext.Provider value={bodyData}>
+            <SetBodyDataContext.Provider value={setBodyData}>
+              {children}
+            </SetBodyDataContext.Provider>
+          </BodyDataContext.Provider>
         </SetSearchedContext.Provider>
       </SearchedContext.Provider>
     </FetchExercises.Provider>)

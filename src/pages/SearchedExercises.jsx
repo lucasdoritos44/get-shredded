@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FetchExercisesData, SearchedContextData } from '../context/fetchExercises'
+import { SearchedContextData } from '../context/fetchExercises'
 
 import { Box, Pagination } from '@mui/material'
 
@@ -31,7 +31,7 @@ const Exercises = () => {
       <Box className="exercises" maxWidth="100vw" minHeight="100vh" id="exercises" display="flex" justifyContent="center" flexWrap="wrap">
         {currentExercises.map((exercise) => {
           return (
-            <ExerciseBox key={exercise.id} name={exercise.name} image={exercise.gifUrl} bodyPart={exercise.bodyPart} />
+            <ExerciseBox key={exercise.id} id={exercise.id} name={exercise.name} image={exercise.gifUrl} bodyPart={exercise.bodyPart} />
           )
         })}
       </Box>

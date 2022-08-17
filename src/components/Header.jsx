@@ -16,7 +16,7 @@ const Header = () => {
       {isMobile ? <Stack direction="row" sx={{ gap: { sm: '24px', md: '40px' } }}>
         <Link className="links" to='/'>Home</Link>
         <Link className="links" to='/exercises'>Exercises</Link>
-        <Link className="links" to='/'>Body Calculator</Link>
+        <Link className="links" to='/body-calculator'>Body Calculator</Link>
       </Stack> : <MenuIcon className="menu__icon" onClick={() => setMobileMenu(true)} />}
       {mobileMenu ? <MobileMenu setMobileMenu={setMobileMenu} /> : ''}
     </Stack>

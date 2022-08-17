@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@1&display=swap');
 @import url('http://fonts.cdnfonts.com/css/facon');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Facon', sans-serif;
+  font-family: 'Cinzel', serif;
 }
 
 .background__video {
@@ -100,12 +103,116 @@
   padding-bottom: 1rem;
 }
 
+.form__input {
+  margin-left: 4rem;
+}
+
 .exercises {
   background: rgb(102, 102, 102);
 }
 
 .exercise__box {
+  text-decoration: none;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 387px;
+  height: 381px;
+  text-decoration: none;
+}
+
+.exercise-video {
+  width: 320px;
+  height: 300px;
+}
+
+.bodyCalc__box {
+  color: white;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.bodyCalc__box input {
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 10px;
+  border: none;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.bodyCalc__box select {
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.bodyCalc__button {
+
+  border-radius: 12px;
+  border: none;
+  width: 8rem;
+  height: 3.5rem;
+  box-shadow: 5px 10px 34px -12px rgba(66, 68, 90, 1);
+}
+
+.bodyFat__image {
+  filter: invert(98%) sepia(1%) saturate(100%) hue-rotate(13deg) brightness(113%) contrast(73%);
+  height: 70vh;
+  z-index: 1;
+}
+
+.counter {
+  z-index: 2;
+  font-size: 25px;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 350%;
+    width: 500%;
+  }
+
+  to {
+    margin-left: -20%;
+    width: 100%;
+  }
+}
+
+@keyframes slidein1 {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-right: 20%;
+    width: 100%;
+  }
+}
+
+.box__animation {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.box__animation1 {
+  animation-duration: 2s;
+  animation-name: slidein1;
 }

@@ -1,7 +1,7 @@
 import { Typography, Stack, TextField } from '@mui/material'
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
-import { SetSearchedContextData, FetchExercisesData, SearchedContextData } from '../context/fetchExercises'
+import { SetSearchedContextData, FetchExercisesData } from '../context/fetchExercises'
 
 const SearchExercises = () => {
   const [search, setSearch] = useState('')
@@ -15,7 +15,8 @@ const SearchExercises = () => {
     e.preventDefault();
 
     const searchedExercises = exercises.filter(
-      (item) => item.bodyPart.toLowerCase().includes(search)
+      (item) => item.bodyPart.toLowerCase().includes(search) ||
+        item.target.toLowerCase().includes(search)
     );
 
     console.log(searchedExercises)
@@ -31,6 +32,7 @@ const SearchExercises = () => {
           className="searching__input"
           sx={{
             input: {
+              fontFamily: 'Cinzel',
               fontWeight: '700',
               border: 'none',
               height: '2.5rem',
@@ -54,7 +56,7 @@ const SearchExercises = () => {
           type="text"
         />
       </form>
-      <Typography color="white" textTransform="capitalize" align="center" variant="h6" pt={3} sx={{ fontFamily: 'Tiro Gurmukhi' }}>
+      <Typography color="white" textTransform="capitalize" align="center" variant="h6" pt={3} pl="1rem" pr="1rem" sx={{ fontFamily: 'Cinzel' }}>
         Search for over 1000 exercises that make your body shredded
       </Typography>
     </Stack>

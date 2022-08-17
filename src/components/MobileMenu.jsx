@@ -11,7 +11,7 @@ const MobileMenu = ({ setMobileMenu }) => {
       <CloseIcon className="close__icon" onClick={() => setMobileMenu(false)} />
       <Link className="mobile__links" onClick={() => setMobileMenu(false)} to='/'>Home</Link>
       <Link className="mobile__links" onClick={() => setMobileMenu(false)} to='/exercises'>Exercises</Link>
-      <Link className="mobile__links" onClick={() => setMobileMenu(false)} to='/'>Body Calculator</Link>
+      <Link className="mobile__links" onClick={() => setMobileMenu(false)} to='/body-calculator'>Body Calculator</Link>
     </Stack>
 
   )
