@@ -81,7 +81,7 @@ const ExerciseDetails = () => {
                 <Box>
                   <Typography sx={{ fontSize: { lg: '28px', xs: '18px' } }} fontWeight={600} color="#000" overflow="hidden">
                     <p></p>
-                    {item.video.title}
+                    {item?.video?.title}
                   </Typography>
                   <Typography overflow="hidden" fontSize="14px" color="#000">
                     {item?.video?.channelName}
