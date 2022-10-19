@@ -116,7 +116,7 @@ const BodyCalculator = () => {
                 <option value="female">Female</option>
               </select>
             </Box>
-            <Box className="bodyCalc__box" sx={{ fontSize: { sx: '14px', md: '18px', lg: '24px' } }}>
+            <Box className="bodyCalc__box" sx={{ fontSize: { xs: '14px', md: '18px', lg: '24px' } }}>
               <label htmlFor="weight">Weight</label>
               <input id="weight" className="form__input" type="number" onChange={weightHandler}></input>
             </Box>
